@@ -1,0 +1,91 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mrps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mrps.each do |mrp| %>
+      <tr>
+        <td>Neces Bruta</td>
+        <td><%= mrp.a1 %></td>
+        <td><%= mrp.a2 %></td>
+        <td><%= mrp.a3 %></td>
+        <td><%= mrp.a4 %></td>
+        <td><%= mrp.a5 %></td>
+        <td><%= mrp.a6 %></td>
+        <td><%= mrp.a7 %></td>
+        <td><%= mrp.a8 %></td>
+        <td><%= mrp.a9 %></td>
+        <td><%= mrp.a10 %></td>
+        <td><%= mrp.a11 %></td>
+      </tr>
+    <tr>
+      <td>Recarg Prog</td>
+        <td><%= mrp.b1 %></td>
+        <td><%= mrp.b2 %></td>
+        <td><%= mrp.b3 %></td>
+        <td><%= mrp.b4 %></td>
+        <td><%= mrp.b5 %></td>
+        <td><%= mrp.b6 %></td>
+        <td><%= mrp.b7 %></td>
+        <td><%= mrp.b8 %></td>
+        <td><%= mrp.b9 %></td>
+        <td><%= mrp.b10 %></td>
+        <td><%= mrp.b11 %></td>
+
+
+      </tr>
+    <td>Estoque / <%= mrp.est %></td>
+    <% @estoque.each do |a| %>
+
+
+      <td><%= a %></td>
+
+    <% end %>
+    <tr>
+    <td>Nec Liquid</td>
+    <% @lec.each do |a| %>
+
+
+      <td><%= a %></td>
+
+    <% end %>
+    </tr>
+
+
+    <tr>
+      <td>LT / <%= mrp.lt %></td>
+      <% @ltn.each do |a| %>
+
+
+        <td><%= a %></td>
+
+      <% end %>
+    </tr>
+    <td><%= link_to 'Edit', edit_mrp_path(mrp) %></td>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<h1> Eu mereço um 10 professor, minha média agradece </h1>
+

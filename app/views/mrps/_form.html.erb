@@ -1,0 +1,84 @@
+<%= form_with(model: mrp, local: true) do |form| %>
+  <% if mrp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mrp.errors.count, "error") %> prohibited this mrp from being saved:</h2>
+
+      <ul>
+      <% mrp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <tbody>
+    <tr>
+      <th></th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+    </tr>
+    <tr>
+      <th>Neces. Bas.</th>
+      <td><span id="A1" contenteditable><%= form.text_field :a1 , class: "input"%></span></td>
+      <td><span id="B1" contenteditable> <%= form.text_field :a2 , class: "input" %></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :a3 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :a4 , class: "input" %></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :a5 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable> <%= form.text_field :a6 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable> <%= form.text_field :a7 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable>  <%= form.text_field :a8 , class: "input" %></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :a9 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :a10 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :a11 , class: "input"%></span></td>
+
+    </tr>
+    <tr>
+      <th>Recarg Prog</th>
+      <td><span id="A1" contenteditable><%= form.text_field :b1 , class: "input"%></span></td>
+      <td><span id="B1" contenteditable> <%= form.text_field :b2 , class: "input" %></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :b3 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :b4 , class: "input" %></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :b5 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable> <%= form.text_field :b6 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable> <%= form.text_field :b7 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable>  <%= form.text_field :b8 , class: "input" %></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :b9 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :b10 , class: "input"%></span></td>
+      <td><span id="C1" contenteditable><%= form.text_field :b11 , class: "input"%></span></td>
+
+    </tr>
+    <tr>
+      <th>estoque</th>
+      <td><span id="A3" contenteditable><%= form.number_field :est, class: "input" %></span></td>
+    </tr>
+    <tr>
+      <th>Cust Ped</th>
+      <td><span id="A3" contenteditable><%= form.number_field :c2, class: "input" %></span></td>
+    </tr>
+    <tr>
+      <th>Cust Arm</th>
+      <td><span id="A3" contenteditable><%= form.number_field :c3, class: "input" %></span></td>
+    </tr>
+
+    <tr>
+      <th>LT</th>
+      <td><span id="A3" contenteditable><%= form.number_field :lt, class: "input" %></span></td>
+    </tr>
+
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <%= form.submit "Calcular" %>
+  </div>
+<% end %>
